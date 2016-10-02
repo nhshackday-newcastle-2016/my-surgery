@@ -1,0 +1,65 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div style="text-align: center" class="col-md-12">
+      <img src="static/images/TYA-LGI-map.jpg">
+    </div>
+  </div>
+</div>
+
+<section class="dark-green-section">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-push-2">
+          <p>
+          Leeds Train Station is the closest station to the LGI which is a 12 minute walk away.
+          Car parking at Leeds Children&#39;s Hospital
+          </p>
+          <p>
+          There is a multi-storey car park located on the LGI site, however spaces are limited. It has
+          1,300 spaces for patients, visitors and staff and operates a ‘Pay as you Leave’ system - on
+          entering the car park you will need to take a ticket.
+          </p>
+          <p>
+          The car park is open Monday - Sunday 6am to 12 midnight and car parking charges can be
+          found by clicking here. If you need to remove your vehicle when the car park is closed,
+          please contact security.
+          </p>
+          <p>
+          Alternatively, there are a number of car parks located close by:
+          Rose Bowl
+          </p>
+          <p>
+          The Rose Bowl car park is a short walk from the LGI. The car park is split into two sections -
+          there is a car park directly outside the Rose Bowl and there is an underground car park below
+          the Rose Bowl. Both are accessible via Portland Crescent. The car parks are open Mon - Sat
+          0600-2300 and the postcode is LS1 3HB.
+          </p>
+          <p>
+          The Woodhouse Lane car park is a 5 minute walk from the LGI and has 1250 spaces. It is
+          open 24 hours and the postcode is LS2 3AX.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="width: 100%; height: 500px" id="mapCanvas">
+</section>
+
+<script>
+      var latlng = new google.maps.LatLng(53.802995, -1.551831);
+      var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		scrollwheel: false,
+	    navigationControl: false,
+	    mapTypeControl: false,
+	    scaleControl: false,
+	    draggable: false,
+		disableDefaultUI: true
+      };
+      var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
+</script>
+{% endblock content %}

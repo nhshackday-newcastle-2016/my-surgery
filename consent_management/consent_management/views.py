@@ -6,6 +6,10 @@ class IndexView(TemplateView):
     template_name = 'index.html'
 
 
+class FindUsView(TemplateView):
+    template_name = 'templates/find-us.html'
+
+
 class ProcedureDetailView(DetailView):
     """
     Failover view for templates - just look for this path in Django!

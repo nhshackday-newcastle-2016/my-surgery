@@ -7,7 +7,9 @@ from rest_framework import routers
 from consent_management.viewsets import (
     ProcedureViewSet
 )
-from consent_management.views import IndexView, ProcedureDetailView
+from consent_management.views import (
+    IndexView, ProcedureDetailView, FindUsView
+)
 
 router = routers.DefaultRouter()
 router.register(r'procedures', ProcedureViewSet)
@@ -17,5 +19,6 @@ urlpatterns = patterns('',
     url(r'^api-1/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^find-us$', FindUsView.as_view(), name='find_us'),
     url(r'^procedure/(?P<slug>[-\w]+)$', ProcedureDetailView.as_view(), name='procedure-detail'),
 )

@@ -1,7 +1,8 @@
 // @import "settings";
-$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
-@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
-@import "bootstrap-sass/assets/stylesheets/bootstrap";
+$icon-font-path: "public/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+@import "public/bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "public/bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
 
 // Or selectively include components
 // @import
@@ -44,6 +45,11 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 $nhs_blue: #0072ba;
 $leeds_medium: #009888;
 $leeds_light: #9ad2ce;
+$leeds_dark: #005355;
+
+html, body{
+  height: 100%;
+}
 
 
 .max-size{
@@ -112,6 +118,54 @@ $leeds_light: #9ad2ce;
 .importantlink {
     margin: 5px 0;
     font-size: 10em;
+}
+
+.dark-green-section{
+    background-color: $leeds_medium;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.medium-green-section{
+    background-color: $leeds_dark;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.light-green-section{
+    background-color: $leeds_light;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.circular-img{
+  padding-left: 40px;
+  padding-right: 40px;
+
+  img{
+    margin-bottom: 20px;
+  }
+}
+
+a.white-link{
+    color: white;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {

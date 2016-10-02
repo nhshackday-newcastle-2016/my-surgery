@@ -1,23 +1,132 @@
 {% load md2 %}
-<div style="height: 100px" class="gradient">
-  <img style="height: 100px; float: left; margin-top: 10px; margin-left: 50px" src="static/images/Leeds-Childrens-Hospital-Logo-White-01.png">
-  <h1 style="float: right; margin-right: 20px; color: white; font-size: 60px;">{{ object.name }}</h1>
-</div>
+{% include "templates/partials/banner.html" %}
 <div class="max-size">
+  <section style="padding-bottom: 40px;">
+    <div class="container">
+      <div class="row">
+        <h2>
+          Preparation
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 circular-img">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <img style="width: 100%" src="static/images/Food-Dome-512.png">
+            </div>
+          </div>
+          <div class="row">
+            <div style="font-size: 20px; font-weight: 200" class="col-md-12 text-center">
+              No food for 6 Hours before the procedure
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 circular-img">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <img style="width: 100%" src="static/images/water-512.png">
+            </div>
+          </div>
+          <div class="row">
+            <div style="font-size: 20px; font-weight: 200" class="col-md-12 text-center">
+              <p>
+                Clear fluids only for up to 2 hours before.
+              </p>
+              <p>
+                (Actively encouraged to drink)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 circular-img">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <img style="width: 100%" src="static/images/Schoolbag.png">
+            </div>
+          </div>
+          <div class="row">
+            <div style="font-size: 20px; font-weight: 200" class="col-md-12 text-center">
+              You might have to wait a little while before your procedure so make sure to bring anything you will need.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Anaesthesia</h2>
-        {{ object.consent_form.anaesthesia|markdown }}
-        <h2>Explanation</h2>
-        {{ object.consent_form.explanation|markdown }}
-        <h2>Recovery</h2>
-        {{ object.consent_form.recovery|markdown }}
-        <h2>Follow Up</h2>
-        {{ object.consent_form.follow_up|markdown }}
-        <h2>After Care</h2>
-        {{ object.consent_form.after_care|markdown }}
+        <div class="row">
+          <div style="width: 70%; margin-right: -300px" class="col-md-6">
+            <h2>Surgery</h2>
+            {{ object.consent_form.explanation|markdown }}
+          </div>
+          <div class="col-md-6">
+            <img style="width: 100%" src="static/images/Baby_Rhino.png" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <section class="dark-green-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <h2>Anaesthesia</h2>
+        {{ object.consent_form.anaesthesia|markdown }}
+      </div>
+    </div>
+  </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Recovery</h2>
+          {{ object.consent_form.recovery|markdown }}
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="medium-green-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Follow Up</h2>
+            {{ object.consent_form.follow_up|markdown }}
+          </div>
+        </div>
+      </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+            <h2>After Care</h2>
+            {{ object.consent_form.after_care|markdown }}
+          </div>
+        </div>
+      </div>
+      </section>
+      <section class="light-green-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+          <h2>Children's Corner</h2>
+          <div style="text-align: center">
+            <div class="videoWrapper">
+              <iframe src="https://www.youtube.com/embed/u_OzLxL6a8o" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row dark-green-section">
+      <div class="col-md-12 text-center">
+        <a class="white-link" href="/find-us">Find Us</a>
+      </div>
+    </div>
+  </footer>
 </div>
